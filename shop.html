@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FilmCamerasGeorgia</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-left">FilmCamerasGeorgia</div>
+    <nav class="nav-center">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Our Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="active" href="#">Shop</a>
+    </nav>
+    <div class="nav-right">
+      <a class="signup-btn" href="#signup-modal">Sign Up</a>
+    </div>
+  </header>
+  <main>
+    <section class="section shop-home light">
+      <div class="wrap">
+        <h1>Shop</h1>
+        <p class="muted">Curated selection — browse the collection.</p>
+      </div>
+    </section>
+    <section class="section shop-grid">
+      <div class="wrap shop-layout">
+        <aside class="sidebar">
+          <h3>Filters</h3>
+
+          <div class="filter-group">
+            <h4>Category</h4>
+            <label><input type="checkbox"> SLR's</label><br>
+            <label><input type="checkbox"> TLR's</label><br>
+            <label><input type="checkbox"> Accessories</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Price</h4>
+            <label><input type="radio" name="price"> $0 - $50</label><br>
+            <label><input type="radio" name="price"> $50 - $100</label><br>
+            <label><input type="radio" name="price"> $100+</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Sort</h4>
+            <select>
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+        </aside>
+        <div class="product-area">
+          <div class="product-grid">
+            <div class="product">
+              <span class="badge new">New</span>
+              <img src="images/four.jpg" alt="">
+              <p>Product 1</p>
+            </div>
+
+            <div class="product">
+              <span class="badge best">Best Seller</span>
+              <img src="images/four.jpg" alt="">
+              <p>Product 2</p>
+            </div>
+
+            <div class="product">
+              <span class="badge out">Out of Stock</span>
+              <img src="images/four.jpg" alt="">
+              <p>Product 3</p>
+            </div>
+
+            <div class="product">
+              <img src="images/four.jpg" alt="">
+              <p>Product 4</p>
+            </div>
+
+            <div class="product">
+              <img src="images/four.jpg" alt="">
+              <p>Product 5</p>
+            </div>
+
+            <div class="product">
+              <img src="images/four.jpg" alt="">
+              <p>Product 6</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+ <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <h2>THE<br>FilmCamerasGeorgia</h2>
+      </div>
+      <div class="footer-middle">
+        <p>123-456-7890<br>FilmCamerasGeorgia@gmail.com</p>
+        <p>500 Lorem ipsum St.<br>Lorem ipsum, DA 94158</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  <div id="signup-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <a href="#" class="modal-close" aria-label="Close">✕</a>
+      <h3>Sign UP</h3>
+      <form class="signup-form" action="#" method="post">
+        <div class="field-row">
+          <input type="text" name="name" placeholder="Name" required pattern="[A-Za-z\s]{2,}">
+          <span class="error-msg">Please enter your name.</span>
+        </div>
+
+        <div class="field-row">
+          <input type="text" name="surname" placeholder="Surname" required pattern="[A-Za-z\s]{2,}">
+          <span class="error-msg">Please enter your surname.</span>
+        </div>
+
+        <div class="field-row">
+          <input type="email" name="email" placeholder="Email" required>
+          <span class="error-msg">Enter a valid email address.</span>
+        </div>
+
+        <div class="field-row">
+          <input type="tel" name="mobile" placeholder="Mobile number" required pattern="^\+?\d{7,15}$">
+          <span class="error-msg">Enter a valid phone number.</span>
+        </div>
+
+        <div class="field-row">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
