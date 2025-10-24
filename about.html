@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About - Film Cameras Georgia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">Film Cameras Georgia</div>
+        <nav class="nav-center">
+            <a href="index.html#home">Home</a>
+            <a class="active" href="#">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="crew.html">Crew</a>
+            <a href="shop.html">Shop</a>
+        </nav>
+        <div class="nav-right">
+            <a class="signup-btn" href="#signup-modal">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Overview Section -->
+        <section class="section overview">
+            <div class="wrap">
+                <h2>Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-text">
+                        <p>
+                            At FilmCamerasGeorgia, we are your go-to destination for a wide selection of traditional and
+                            cutting-edge
+                            camera equipment, lenses, and accessories. Our store features top-tier brands and expert
+                            guidance to help
+                            you choose the perfect gear for your photography style.
+                        </p>
+                        <p>
+                            Experience our ‘Capture the Moment’ event, where local photographers host workshops
+                            showcasing advanced
+                            techniques and lighting setups. Additionally, we offer equipment rentals, ensuring that
+                            quality gear is
+                            accessible to all photography enthusiasts. Step into our welcoming space filled with
+                            creativity, where
+                            inspiration awaits every lens artist.
+                        </p>
+                    </div>
+                    <div class="overview-image">
+                        <img src="images/eleven.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="section vision light">
+            <div class="wrap">
+                <h2>Vision</h2>
+                <div class="vision-grid">
+                    <div class="vision-item">
+                        <h3>Empowering Your Creativity</h3>
+                        <p>
+                            Our mission at FilmCamerasGeorgia is to empower photographers of all levels by providing
+                            them with
+                            high-quality camera gear, tailored advice, and a supportive community. Through our ‘Capture
+                            the Moment’
+                            project, we aim to enhance skills and inspire creativity through interactive workshops and
+                            hands-on
+                            experiences.
+                        </p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h3>Commitment to Excellence</h3>
+                        <p>
+                            We are committed to offering top-notch customer service, expert recommendations, and a
+                            diverse range of
+                            products to cater to every photography need. Our dedication to quality ensures that every
+                            customer
+                            receives the best possible guidance and equipment to fuel their passion.
+                        </p>
+                    </div>
+
+                    <div class="vision-item">
+                        <h3>Dedication to Diversity</h3>
+                        <p>
+                            FilmCamerasGeorgia embraces diversity and inclusivity, valuing the unique perspectives and
+                            styles of all
+                            photographers. We strive to create a community where every individual feels welcomed,
+                            supported, and
+                            encouraged to explore their creativity without boundaries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div class="footer-left">
+                <h2>THE<br>FilmCamerasGeorgia</h2>
+            </div>
+            <div class="footer-middle">
+                <p>123-456-7890<br>FilmCamerasGeorgia@gmail.com</p>
+                <p>500 Lorem ipsum St.<br>Lorem ipsum, DA 94158</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="signup-modal" class="modal" aria-hidden="true">
+            <div class="modal-panel">
+                <a href="#" class="modal-close" aria-label="Close">✕</a>
+                <h3>Sign UP</h3>
+                <form class="signup-form" action="#" method="post">
+                    <div class="field-row">
+                        <input type="text" name="name" placeholder="Name" required pattern="[A-Za-z\s]{2,}">
+                        <span class="error-msg">Please enter your name.</span>
+                    </div>
+
+                    <div class="field-row">
+                        <input type="text" name="surname" placeholder="Surname" required pattern="[A-Za-z\s]{2,}">
+                        <span class="error-msg">Please enter your surname.</span>
+                    </div>
+
+                    <div class="field-row">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <span class="error-msg">Enter a valid email address.</span>
+                    </div>
+
+                    <div class="field-row">
+                        <input type="tel" name="mobile" placeholder="Mobile number" required pattern="^\+?\d{7,15}$">
+                        <span class="error-msg">Enter a valid phone number.</span>
+                    </div>
+
+                    <div class="field-row">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Floating Chat Icon (CSS-only) -->
+<div class="chat-container">
+  <input type="checkbox" id="chat-toggle">
+  <label for="chat-toggle" class="chat-btn">
+    💬
+  </label>
+
+  <div class="chat-window">
+    <div class="chat-header">
+      <h4>Chat Support</h4>
+      <label for="chat-toggle" class="close-chat">×</label>
+    </div>
+    <div class="chat-body">
+      <p>Hi there 👋<br>How can we help you today?</p>
+      <textarea placeholder="Type your message..." disabled></textarea>
+      <button disabled>Send</button>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+/* ========= Reset & base ========= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,10 +21,12 @@ body {
   background: #fff;
   line-height: 1.6;
   padding-top: 80px;
+  /* space for fixed navbar */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===== variables ===== */
 :root {
   --max-w: 1200px;
   --nav-h: 80px;
@@ -34,6 +37,7 @@ body {
   --radius: 12px;
 }
 
+/* ===== wrap ===== */
 .wrap {
   width: 100%;
   max-width: var(--max-w);
@@ -41,6 +45,7 @@ body {
   padding-inline: 24px;
 }
 
+/* ===== typography ===== */
 h1,
 h2,
 h3,
@@ -54,6 +59,7 @@ h4 {
   color: var(--muted)
 }
 
+/* ========= NAVBAR (fixed) ========= */
 .navbar {
   position: fixed;
   top: 0;
@@ -119,6 +125,7 @@ h4 {
   color: #000;
 }
 
+/* Sign in button (right) */
 .signup-btn {
   display: inline-block;
   padding: 8px 12px;
@@ -136,6 +143,7 @@ h4 {
   transform: translateY(-2px)
 }
 
+/* ====== SECTIONS ====== */
 .section {
   padding: clamp(40px, 8vw, 110px) 5%;
   text-align: center;
@@ -150,6 +158,7 @@ h4 {
   margin: 0 auto;
 }
 
+/* ===== Full-bleed images without overflow ===== */
 .content.full-width {
   position: relative;
   overflow: visible;
@@ -168,6 +177,7 @@ h4 {
   border: 1px solid #e6e6e6;
 }
 
+/* ====== feature strip ====== */
 .features {
   display: flex;
   gap: 20px;
@@ -197,40 +207,50 @@ h4 {
   transform: scale(1.03);
 }
 
+/* Uniform Work Grid Images */
 .work-grid .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
+/* Make all image cards the same size */
 .work-grid .card img {
   width: 100%;
   height: 300px;
+  /* adjust this number for taller/shorter cards */
   object-fit: cover;
+  /* crops and centers the image nicely */
   display: block;
   border-radius: 8px;
+  /* optional: rounded corners */
 }
 
+/* Optional: make the text card consistent too */
 .work-grid .card-large {
   background: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 300px;
+  /* match image height */
   padding: 2rem;
   border-radius: 8px;
 }
 
+/* Make sure the grid layout remains consistent */
 .work-grid .card {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
 }
 
+/* Container for image + overlay */
 .image-container {
   position: relative;
   width: 100%;
   height: 300px;
+  /* same as before */
 }
 
 .image-container img {
@@ -241,6 +261,7 @@ h4 {
   transition: transform 0.4s ease;
 }
 
+/* Overlay styling */
 .overlay {
   position: absolute;
   inset: 0;
@@ -257,6 +278,7 @@ h4 {
   padding: 1rem;
 }
 
+/* Hover effects */
 .image-container:hover img {
   transform: scale(1.05);
 }
@@ -265,6 +287,7 @@ h4 {
   opacity: 1;
 }
 
+/* ABOUT SECTION (modern redesign) */
 .about-modern {
   background: #e8e8e8;
   text-align: center;
@@ -273,6 +296,7 @@ h4 {
   font-family: 'Lora', serif;
 }
 
+/* top white header area */
 .about-header {
   background: #fff;
   position: relative;
@@ -289,6 +313,7 @@ h4 {
 
 .about-header .section-number {
   color: #b8860b;
+  /* gold accent */
   font-size: 0.9rem;
   position: relative;
   top: -10px;
@@ -301,6 +326,7 @@ h4 {
   margin: 10px auto 0;
 }
 
+/* main gray area */
 .about-content {
   background: #e8e8e8;
   padding: 80px 20px;
@@ -347,6 +373,7 @@ h4 {
   background: #a47600;
 }
 
+/* SERVICES SECTION */
 .services {
   background: #fff;
   padding: 100px 60px;
@@ -392,6 +419,9 @@ h4 {
   font-size: 0.95rem;
 }
 
+
+
+/* ===== contact card ====== */
 .contact-card {
   width: 100%;
   max-width: 820px;
@@ -403,6 +433,7 @@ h4 {
   box-shadow: var(--shadow);
 }
 
+/* ========= SHOP ========= */
 .shop-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -451,6 +482,7 @@ h4 {
   font-weight: 600;
 }
 
+/* ===== BADGES ===== */
 .product .badge {
   position: absolute;
   top: 12px;
@@ -478,6 +510,7 @@ h4 {
   background: linear-gradient(135deg, #ff4d4d, #b32424);
 }
 
+/* ===== modal (CSS-only using :target) ===== */
 .modal {
   position: fixed;
   inset: 0;
@@ -528,6 +561,7 @@ h4 {
   font-size: 1.1rem;
 }
 
+/* form inside modal */
 .signup-form .field-row {
   margin-bottom: 12px;
 }
@@ -561,6 +595,7 @@ h4 {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
 
+/* ===== hover & focus micro-interactions ===== */
 a:focus,
 button:focus,
 input:focus {
@@ -587,6 +622,8 @@ input:focus {
 }
 
 
+
+/* ===== responsive rules ===== */
 @media (max-width:1100px) {
   .grid-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -685,6 +722,7 @@ input:focus {
   }
 }
 
+/* Default input style */
 .signup-form input {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -692,6 +730,7 @@ input:focus {
   font-size: 1rem;
 }
 
+/* Error message hidden by default */
 .error-msg {
   display: none;
   color: #e74c3c;
@@ -699,6 +738,7 @@ input:focus {
   margin-top: 4px;
 }
 
+/* Show error only if input is invalid AND not empty */
 .signup-form input:invalid:not(:placeholder-shown) {
   border-color: #e74c3c;
   background: #fff6f6;
@@ -708,6 +748,7 @@ input:focus {
   display: block;
 }
 
+/* Optional: green border when valid */
 .signup-form input:valid:not(:placeholder-shown) {
   border-color: #2ecc71;
   background: #f6fff9;
@@ -715,6 +756,7 @@ input:focus {
 
 .site-footer {
   background-color: #d3bb6e;
+  /* minty green like your screenshot */
   color: #000;
   padding: 48px 24px 24px;
   font-family: "Lora", serif;
@@ -766,6 +808,7 @@ input:focus {
   margin-top: 24px;
 }
 
+/* --- Login Modal --- */
 .login-panel {
   max-width: 400px;
   padding: 2rem;
@@ -783,6 +826,7 @@ input:focus {
   color: #333;
 }
 
+/* Form fields */
 .login-form .field-row {
   margin-bottom: 1rem;
   display: flex;
@@ -810,6 +854,7 @@ input:focus {
   outline: none;
 }
 
+/* Password icon — visual only */
 .password-wrapper {
   position: relative;
 }
@@ -824,6 +869,7 @@ input:focus {
   pointer-events: none;
 }
 
+/* Remember me */
 .remember-row {
   margin: 0.75rem 0 1.25rem;
   font-size: 0.9rem;
@@ -835,6 +881,7 @@ input:focus {
   accent-color: #596d73;
 }
 
+/* Log In button */
 .login-btn {
   width: 100%;
   background-color: #596d73;
@@ -851,6 +898,7 @@ input:focus {
   background-color: #4a5c61;
 }
 
+/* Lost password link */
 .extra-links {
   text-align: center;
   margin-top: 1rem;
@@ -864,4 +912,220 @@ input:focus {
 
 .extra-links a:hover {
   color: #000;
+}
+
+/* ---------- ABOUT DETAILS PAGE ---------- */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.overview-text p {
+  margin-bottom: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.overview-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.vision-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.vision-item p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- CREW PAGE ---------- */
+
+/* ---------- CREW PAGE ---------- */
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 80px;
+  text-align: center;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.crew-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+}
+
+.crew-member h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.crew-member .role {
+  color: #777;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.crew-member .bio {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Responsive tweak */
+@media (max-width: 900px) {
+  .crew-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== Floating Chat Icon ===== */
+.chat-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: "Lora", serif;
+}
+
+/* Hide checkbox */
+#chat-toggle {
+  display: none;
+}
+
+/* Chat button bubble */
+.chat-btn {
+  background: #111;
+  color: #fff;
+  font-size: 1.6rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.chat-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* Chat window */
+.chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: none;
+}
+
+/* Show when checked */
+#chat-toggle:checked + .chat-btn + .chat-window {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Chat header */
+.chat-header {
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.close-chat {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Chat body */
+.chat-body {
+  padding: 12px 14px;
+}
+
+.chat-body p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.chat-body textarea {
+  width: 100%;
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 8px;
+}
+
+.chat-body button {
+  width: 100%;
+  padding: 8px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
