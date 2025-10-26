@@ -1,4 +1,3 @@
-/* ========= Reset & base ========= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,11 +9,11 @@ body {
   height: 100%;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
 
 body {
   font-family: "Lora", serif;
@@ -22,12 +21,10 @@ body {
   background: #fff;
   line-height: 1.6;
   padding-top: 80px;
-  /* space for fixed navbar */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== variables ===== */
 :root {
   --max-w: 1200px;
   --nav-h: 80px;
@@ -38,7 +35,6 @@ body {
   --radius: 12px;
 }
 
-/* ===== wrap ===== */
 .wrap,
 .content {
   width: 100%;
@@ -47,8 +43,6 @@ body {
   padding-inline: 24px;
 }
 
-
-/* ===== typography ===== */
 h1,
 h2,
 h3,
@@ -59,10 +53,9 @@ h4 {
 }
 
 .muted {
-  color: var(--muted)
+  color: var(--muted);
 }
 
-/* ========= NAVBAR (fixed) ========= */
 .navbar {
   position: fixed;
   top: 0;
@@ -75,12 +68,11 @@ h4 {
   z-index: 1200;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* distribute space evenly */
-  padding: 0 clamp(12px, 3vw, 30px); /* add padding so it’s flexible */
-  flex-wrap: wrap; /* allow wrapping when zoomed or resized */
+  justify-content: space-between;
+  padding: 0 clamp(12px, 3vw, 30px);
+  flex-wrap: wrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-
 
 .nav-left {
   font-weight: 700;
@@ -92,17 +84,15 @@ h4 {
   align-items: center;
 }
 
-
 .nav-center {
   display: flex;
   gap: clamp(12px, 2vw, 40px);
   align-items: center;
   justify-content: center;
-  flex: 1;           /* let it expand naturally */
-  flex-wrap: wrap;   /* allow links to wrap when space is tight */
+  flex: 1;
+  flex-wrap: wrap;
   text-align: center;
 }
-
 
 .nav-center a {
   text-decoration: none;
@@ -110,7 +100,7 @@ h4 {
   font-weight: 600;
   padding: 6px 2px;
   position: relative;
-  transition: color .22s;
+  transition: color 0.22s;
 }
 
 .nav-center a::after {
@@ -121,7 +111,7 @@ h4 {
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: width .22s;
+  transition: width 0.22s;
 }
 
 .nav-center a:hover::after,
@@ -132,14 +122,11 @@ h4 {
 .nav-center a:hover {
   color: #000;
 }
-/* ========= HAMBURGER MENU ========= */
 
-/* Hide checkbox by default */
 .nav-toggle {
   display: none;
 }
 
-/* The 3-line hamburger icon */
 .nav-toggle-label {
   display: none;
   flex-direction: column;
@@ -161,10 +148,6 @@ h4 {
   transition: all 0.3s ease;
 }
 
-
-
-
-/* Sign in button (right) */
 .signup-btn {
   display: inline-block;
   padding: 8px 12px;
@@ -173,16 +156,15 @@ h4 {
   font-weight: 600;
   text-decoration: none;
   color: var(--accent);
-  transition: background .2s, color .2s, transform .12s;
+  transition: background 0.2s, color 0.2s, transform 0.12s;
 }
 
 .signup-btn:hover {
   background: var(--accent);
   color: #fff;
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
-/* ====== SECTIONS ====== */
 .section {
   padding: clamp(40px, 8vw, 110px) 5%;
   text-align: center;
@@ -197,7 +179,6 @@ h4 {
   margin: 0 auto;
 }
 
-/* ===== Full-bleed images without overflow ===== */
 .content.full-width {
   position: relative;
   overflow: visible;
@@ -214,8 +195,6 @@ h4 {
   border: 1px solid #e6e6e6;
 }
 
-
-/* ====== feature strip ====== */
 .features {
   display: flex;
   gap: 20px;
@@ -238,57 +217,47 @@ h4 {
   border-radius: 8px;
   border: 1px solid #eee;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 
 .feature:hover img {
   transform: scale(1.03);
 }
 
-/* Uniform Work Grid Images */
 .work-grid .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
-/* Make all image cards the same size */
 .work-grid .card img {
   width: 100%;
   height: 300px;
-  /* adjust this number for taller/shorter cards */
   object-fit: cover;
-  /* crops and centers the image nicely */
   display: block;
   border-radius: 8px;
-  /* optional: rounded corners */
 }
 
-/* Optional: make the text card consistent too */
 .work-grid .card-large {
   background: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 300px;
-  /* match image height */
   padding: 2rem;
   border-radius: 8px;
 }
 
-/* Make sure the grid layout remains consistent */
 .work-grid .card {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
 }
 
-/* Container for image + overlay */
 .image-container {
   position: relative;
   width: 100%;
   height: 300px;
-  /* same as before */
 }
 
 .image-container img {
@@ -299,7 +268,6 @@ h4 {
   transition: transform 0.4s ease;
 }
 
-/* Overlay styling */
 .overlay {
   position: absolute;
   inset: 0;
@@ -316,7 +284,6 @@ h4 {
   padding: 1rem;
 }
 
-/* Hover effects */
 .image-container:hover img {
   transform: scale(1.05);
 }
@@ -325,16 +292,14 @@ h4 {
   opacity: 1;
 }
 
-/* ABOUT SECTION (modern redesign) */
 .about-modern {
   background: #e8e8e8;
   text-align: center;
   padding: 100px 20px;
   position: relative;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
-/* top white header area */
 .about-header {
   background: #fff;
   position: relative;
@@ -342,7 +307,7 @@ h4 {
 }
 
 .about-header h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   letter-spacing: 2px;
   color: #333;
@@ -351,7 +316,6 @@ h4 {
 
 .about-header .section-number {
   color: #b8860b;
-  /* gold accent */
   font-size: 0.9rem;
   position: relative;
   top: -10px;
@@ -364,14 +328,13 @@ h4 {
   margin: 10px auto 0;
 }
 
-/* main gray area */
 .about-content {
   background: #e8e8e8;
   padding: 80px 20px;
 }
 
 .about-content h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   line-height: 1.3;
   color: #333;
@@ -411,14 +374,13 @@ h4 {
   background: #a47600;
 }
 
-/* SERVICES SECTION */
 .services {
   background: #fff;
   padding: 100px 60px;
 }
 
 .services-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   color: #0d0d25;
   margin-bottom: 60px;
@@ -445,7 +407,7 @@ h4 {
 }
 
 .service-item h3 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-size: 1.3rem;
   color: #222;
   margin-bottom: 15px;
@@ -457,9 +419,6 @@ h4 {
   font-size: 0.95rem;
 }
 
-
-
-/* ===== contact card ====== */
 .contact-card {
   width: 100%;
   max-width: 820px;
@@ -471,7 +430,6 @@ h4 {
   box-shadow: var(--shadow);
 }
 
-/* ========= SHOP ========= */
 .shop-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -503,7 +461,7 @@ h4 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform .22s ease;
+  transition: transform 0.22s ease;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
   position: relative;
 }
@@ -520,7 +478,6 @@ h4 {
   font-weight: 600;
 }
 
-/* ===== BADGES ===== */
 .product .badge {
   position: absolute;
   top: 12px;
@@ -548,7 +505,6 @@ h4 {
   background: linear-gradient(135deg, #ff4d4d, #b32424);
 }
 
-/* ===== modal (CSS-only using :target) ===== */
 .modal {
   position: fixed;
   inset: 0;
@@ -558,7 +514,7 @@ h4 {
   background: rgba(0, 0, 0, 0.45);
   opacity: 0;
   pointer-events: none;
-  transition: opacity .22s ease;
+  transition: opacity 0.22s ease;
   z-index: 2000;
 }
 
@@ -575,18 +531,18 @@ h4 {
   position: relative;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   transform: translateY(-8px);
-  animation: modal-in .18s ease;
+  animation: modal-in 0.18s ease;
 }
 
 @keyframes modal-in {
   from {
-    transform: translateY(-12px) scale(.995);
-    opacity: 0
+    transform: translateY(-12px) scale(0.995);
+    opacity: 0;
   }
 
   to {
     transform: translateY(0) scale(1);
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -599,7 +555,6 @@ h4 {
   font-size: 1.1rem;
 }
 
-/* form inside modal */
 .signup-form .field-row {
   margin-bottom: 12px;
 }
@@ -625,7 +580,7 @@ h4 {
   border: none;
   cursor: pointer;
   font-weight: 700;
-  transition: transform .12s, box-shadow .12s;
+  transition: transform 0.12s, box-shadow 0.12s;
 }
 
 .btn:hover {
@@ -633,7 +588,6 @@ h4 {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
 
-/* ===== hover & focus micro-interactions ===== */
 a:focus,
 button:focus,
 input:focus {
@@ -645,7 +599,7 @@ input:focus {
 .card img,
 .thumb img,
 .feature img {
-  transition: transform .28s ease, box-shadow .28s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .card img:hover,
@@ -659,11 +613,6 @@ input:focus {
   transform: translateY(-6px);
 }
 
-
-
-
-
-/* Default input style */
 .signup-form input {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -671,7 +620,6 @@ input:focus {
   font-size: 1rem;
 }
 
-/* Error message hidden by default */
 .error-msg {
   display: none;
   color: #e74c3c;
@@ -679,17 +627,15 @@ input:focus {
   margin-top: 4px;
 }
 
-/* Show error only if input is invalid AND not empty */
 .signup-form input:invalid:not(:placeholder-shown) {
   border-color: #e74c3c;
   background: #fff6f6;
 }
 
-.signup-form input:invalid:not(:placeholder-shown)+.error-msg {
+.signup-form input:invalid:not(:placeholder-shown) + .error-msg {
   display: block;
 }
 
-/* Optional: green border when valid */
 .signup-form input:valid:not(:placeholder-shown) {
   border-color: #2ecc71;
   background: #f6fff9;
@@ -697,7 +643,6 @@ input:focus {
 
 .site-footer {
   background-color: #d3bb6e;
-  /* minty green like your screenshot */
   color: #000;
   padding: 48px 24px 24px;
   font-family: "Lora", serif;
@@ -748,8 +693,6 @@ input:focus {
   font-size: 0.85rem;
   margin-top: 24px;
 }
-
-/* --- Login Modal --- */
 .login-panel {
   max-width: 400px;
   padding: 2rem;
@@ -762,12 +705,11 @@ input:focus {
 .login-panel h3 {
   text-align: center;
   margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.6rem;
   color: #333;
 }
 
-/* Form fields */
 .login-form .field-row {
   margin-bottom: 1rem;
   display: flex;
@@ -795,7 +737,6 @@ input:focus {
   outline: none;
 }
 
-/* Password icon — visual only */
 .password-wrapper {
   position: relative;
 }
@@ -810,7 +751,6 @@ input:focus {
   pointer-events: none;
 }
 
-/* Remember me */
 .remember-row {
   margin: 0.75rem 0 1.25rem;
   font-size: 0.9rem;
@@ -822,7 +762,6 @@ input:focus {
   accent-color: #596d73;
 }
 
-/* Log In button */
 .login-btn {
   width: 100%;
   background-color: #596d73;
@@ -839,7 +778,6 @@ input:focus {
   background-color: #4a5c61;
 }
 
-/* Lost password link */
 .extra-links {
   text-align: center;
   margin-top: 1rem;
@@ -854,8 +792,6 @@ input:focus {
 .extra-links a:hover {
   color: #000;
 }
-
-/* ---------- ABOUT DETAILS PAGE ---------- */
 
 .overview-grid {
   display: grid;
@@ -896,11 +832,6 @@ input:focus {
   line-height: 1.6;
 }
 
-
-/* ---------- CREW PAGE ---------- */
-
-/* ---------- CREW PAGE ---------- */
-
 .crew-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -940,8 +871,6 @@ input:focus {
   margin: 0 auto;
 }
 
-
-/* ===== Floating Chat Icon ===== */
 .chat-container {
   position: fixed;
   bottom: 24px;
@@ -950,12 +879,10 @@ input:focus {
   font-family: "Lora", serif;
 }
 
-/* Hide checkbox */
 #chat-toggle {
   display: none;
 }
 
-/* Chat button bubble */
 .chat-btn {
   background: #111;
   color: #fff;
@@ -976,7 +903,6 @@ input:focus {
   transform: scale(1.05);
 }
 
-/* Chat window */
 .chat-window {
   position: absolute;
   bottom: 80px;
@@ -990,13 +916,11 @@ input:focus {
   display: none;
 }
 
-/* Show when checked */
 #chat-toggle:checked + .chat-btn + .chat-window {
   display: block;
   animation: fadeIn 0.3s ease;
 }
 
-/* Chat header */
 .chat-header {
   background: #111;
   color: #fff;
@@ -1017,7 +941,6 @@ input:focus {
   font-size: 1.2rem;
 }
 
-/* Chat body */
 .chat-body {
   padding: 12px 14px;
 }
@@ -1059,9 +982,7 @@ input:focus {
     transform: translateY(0);
   }
 }
-/* === RESPONSIVE STYLES === */
 
-/* ——— Up to 1100px ——— */
 @media (max-width: 1100px) {
   .grid-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -1084,21 +1005,17 @@ input:focus {
   }
 }
 
-/* ——— Up to 900px ——— */
 @media (max-width: 900px) {
   .crew-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ——— Up to 820px (MOBILE NAV + LAYOUT) ——— */
 @media (max-width: 820px) {
-  /* Show hamburger */
   .nav-toggle-label {
     display: flex;
   }
 
-  /* Fullscreen mobile menu */
   .nav-center {
     position: fixed;
     top: 0;
@@ -1113,16 +1030,14 @@ input:focus {
     gap: 25px;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     z-index: 1500;
   }
 
-  /* Show menu when burger checked */
   .nav-toggle:checked ~ .nav-center {
     transform: translateY(0);
   }
 
-  /* Animate burger to "X" */
   .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
   }
@@ -1133,7 +1048,6 @@ input:focus {
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  /* Keep burger fixed while open */
   .nav-toggle:checked + .nav-toggle-label {
     position: fixed;
     top: 22px;
@@ -1141,12 +1055,10 @@ input:focus {
     z-index: 1600;
   }
 
-  /* Hide signup button */
   .nav-right {
     display: none;
   }
 
-  /* Layout adjustments */
   .wrap {
     padding-inline: 18px;
   }
@@ -1188,7 +1100,6 @@ input:focus {
   }
 }
 
-/* ——— Up to 500px ——— */
 @media (max-width: 500px) {
   body {
     padding-top: 72px;
