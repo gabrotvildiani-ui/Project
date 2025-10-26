@@ -72,29 +72,34 @@ h4 {
   z-index: 1200;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* distribute space evenly */
+  padding: 0 clamp(12px, 3vw, 30px); /* add padding so it’s flexible */
+  flex-wrap: wrap; /* allow wrapping when zoomed or resized */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+
 .nav-left {
-  position: absolute;
-  left: clamp(12px, 3vw, 30px);
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 .nav-right {
-  position: absolute;
-  right: clamp(12px, 3vw, 30px);
+  display: flex;
+  align-items: center;
 }
+
 
 .nav-center {
   display: flex;
-  gap: clamp(16px, 4vw, 48px);
+  gap: clamp(12px, 2vw, 40px);
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
+  flex: 1;           /* let it expand naturally */
+  flex-wrap: wrap;   /* allow links to wrap when space is tight */
+  text-align: center;
 }
+
 
 .nav-center a {
   text-decoration: none;
@@ -689,6 +694,26 @@ input:focus {
   .card-large {
     grid-column: auto;
   }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 16px;
+    text-align: center;
+  }
+
+  .nav-center {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .signup-btn {
+    margin-top: 8px;
+  }
+}
+
 }
 
 @media (max-width:500px) {
