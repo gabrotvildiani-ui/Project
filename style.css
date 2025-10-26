@@ -10,10 +10,11 @@ body {
   height: 100%;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 
 body {
   font-family: "Lora", serif;
@@ -38,12 +39,14 @@ body {
 }
 
 /* ===== wrap ===== */
-.wrap {
+.wrap,
+.content {
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
   padding-inline: 24px;
 }
+
 
 /* ===== typography ===== */
 h1,
@@ -171,16 +174,15 @@ h4 {
 
 .content.full-width img {
   display: block;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
   border-radius: var(--radius);
   object-fit: cover;
   box-shadow: var(--shadow);
   border: 1px solid #e6e6e6;
 }
+
 
 /* ====== feature strip ====== */
 .features {
